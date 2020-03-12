@@ -1,0 +1,9 @@
+<div class="container">
+  <app-pieces class="square"
+    *ngFor="let cell of board;
+     let i = index"
+    [chess]="cell"
+    [index]="i"
+    (putChess)="handleChess()"
+  ></app-pieces>
+</div>

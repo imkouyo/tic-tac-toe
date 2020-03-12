@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="player-name">{{playerInfo.getName()}}</div>
+  <div class="chess-area">
+    <div class="chess-group" *ngFor="let chess of playerInfo.getChess()">
+      <i class="chess"
+         [attr.chessType]="chess.type"
+         [attr.chessSize]="chess.size"
+      ></i>
+      <div class="count">{{chess['mount']}}</div>
+    </div>
+  </div>
+
+</div>

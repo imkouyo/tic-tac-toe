@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="header"></div>
+  <div class="content">
+    <app-player [playerInfo]="playerOne"></app-player>
+    <app-board [board]="board"></app-board>
+    <app-player [playerInfo]="playerTwo"></app-player>
+  </div>
+  <div class="footer">
+    <button (click)="createNewGame()">Create New Game</button>
+  </div>
+</div>
+
+
