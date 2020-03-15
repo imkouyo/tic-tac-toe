@@ -1,11 +1,24 @@
 .container {
   display: flex;
-  width: 240px;
+  width: 500px;
   flex-wrap: wrap;
+  justify-content: center;
   .square {
-    width: 70px;
-    height: 70px;
+    width: 160px;
+    height: 160px;
     border: solid 2px black;
+    &:nth-child(3n-2) {
+        border-left: 0;
+    }
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+    &.top-hide {
+      border-top: 0;
+    }
+    &.bottom-hide {
+      border-bottom: 0;
+    }
   }
 
 }

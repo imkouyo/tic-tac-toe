@@ -1,5 +1,47 @@
 .container {
+  .header {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .you-turn {
+      width: 60px;
+      height: 60px;
+      display: block;
+      padding: 0 90px;
+      background: url("../../../assets/pray-solid.svg") no-repeat center;
+      &.hide {
+        visibility: hidden;
+      }
+    }
+    .score-board {
+      display: flex;
+      min-width: 200px;
+      justify-content: space-between;
+      align-items: center;
+      .score {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+  }
   .content {
     display: flex;
+    align-items: start;
+    justify-content: space-around;
+  }
+  .footer {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      background: #3a7cca;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 32px;
+      border: 0px;
+    }
   }
 }

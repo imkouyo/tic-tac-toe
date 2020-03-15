@@ -7,6 +7,11 @@ import { PiecesComponent } from './component/pieces/pieces.component';
 import { BoardComponent } from './component/board/board.component';
 import { PlayerComponent } from './component/player/player.component';
 import { GameComponent } from './container/game/game.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageTipComponent } from './component/message-tip/message-tip.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { GameOverDlgComponent } from './component/game-over-dlg/game-over-dlg.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -15,10 +20,18 @@ import { GameComponent } from './container/game/game.component';
     BoardComponent,
     PlayerComponent,
     GameComponent,
+    MessageTipComponent,
+    GameOverDlgComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    GameOverDlgComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

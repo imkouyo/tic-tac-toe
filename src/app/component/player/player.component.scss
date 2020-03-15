@@ -1,17 +1,31 @@
 .container {
+
   .player-name {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
+    color: #3a7cca;
+    &.red {
+      color: #ff5b49;
+    }
+    padding-bottom: 20px;
   }
   .chess-area {
     display: flex;
-
+    flex-direction: column;
     .chess-group {
       display: flex;
-      flex-direction: column;
       padding: 10px;
-      border: 1px solid black;
+      border: 1px solid #aaa;
       align-items: center;
+      justify-content: space-around;
+      height: 80px;
+      width: 130px;
+      &.select-red {
+        background: rgba(255,91,73, .2);
+      }
+      &.select-blue {
+        background: rgba(58, 124, 202, .2);
+      }
       i {
         display: block;
         &[chessType="circle"] {
@@ -35,9 +49,9 @@
       }
       .count {
         text-align: center;
-
+        font-weight: bold;
+        font-size: 22px;
       }
     }
-
   }
 }

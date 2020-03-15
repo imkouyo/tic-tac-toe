@@ -1,7 +1,13 @@
 <div class="container">
-  <div class="player-name">{{playerInfo.getName()}}</div>
+  <div class="player-name" [ngClass]="{'red': id === 2}">{{name}}</div>
   <div class="chess-area">
-    <div class="chess-group" *ngFor="let chess of playerInfo.getChess()">
+    <div class="chess-group"
+         *ngFor="let chess of playerInfo.getChess()"
+         (click)="selectSize(chess)"
+         [ngClass]="{
+         'select-red': (currentSelect === chess.size && id ===2),
+         'select-blue': (currentSelect === chess.size && id ===1)
+          }">
       <i class="chess"
          [attr.chessType]="chess.type"
          [attr.chessSize]="chess.size"

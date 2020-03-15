@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="message" *ngIf="!isDraw">Congratulations {{winner}} is winner!!</div>
+  <div class="message" *ngIf="isDraw">The game has draw.</div>
+  <button (click)="nextGame()">Next Game</button>
+</div>

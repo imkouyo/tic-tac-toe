@@ -1,0 +1,25 @@
+.container {
+  background: #242424;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .message {
+    color: #faff7c;
+    font-size: 24px;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+  }
+  button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    background: #2a5b95;
+    color: white;
+    font-size: 22px;
+
+  }
+}

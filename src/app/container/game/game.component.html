@@ -1,5 +1,13 @@
 <div class="container">
-  <div class="header"></div>
+  <div class="header">
+    <i class="you-turn" [ngClass]="{'hide': ticTacToeService.getSteps() %2 === 1}"></i>
+    <div class="score-board">
+      <div class="score">{{ticTacToeService.playerOneScore}}</div>
+      <div class="score">:</div>
+      <div class="score">{{ticTacToeService.playerTwoScore}}</div>
+    </div>
+    <i class="you-turn" [ngClass]="{'hide': ticTacToeService.getSteps() %2 === 0}"></i>
+  </div>
   <div class="content">
     <app-player [playerInfo]="playerOne"></app-player>
     <app-board [board]="board"></app-board>

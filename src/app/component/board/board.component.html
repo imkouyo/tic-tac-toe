@@ -3,7 +3,7 @@
     *ngFor="let cell of board;
      let i = index"
     [chess]="cell"
-    [index]="i"
-    (putChess)="handleChess()"
+    [ngClass]="{'top-hide': i < 3, 'bottom-hide': i > 5}"
+    (click)="placeChess(i)"
   ></app-pieces>
 </div>

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TicTacToeService} from '../../service/tic-tac-toe.service';
 
 @Component({
   selector: 'app-board',
@@ -7,11 +8,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BoardComponent implements OnInit {
   @Input() board;
-  constructor() { }
+  constructor(private ticTacToeService: TicTacToeService) { }
 
   ngOnInit(): void {
   }
-  handleChess() {
-
+  placeChess(index) {
+    this.ticTacToeService.placeChess(index);
   }
 }
